@@ -1,7 +1,5 @@
-from govtrack.api import GovTrackClient
-import urllib
-
-client = GovTrackClient()
-#urllib.parse.urlencode("https://www.govtrack.us/developers/api")
-person = client.person({'lastname':'Kennedy'})
-print person
+from models import Person
+'''
+def getRepName():
+    name = Person.objects.filter(firstName = profile.first_name, lastName = profile.last_name)
+'''

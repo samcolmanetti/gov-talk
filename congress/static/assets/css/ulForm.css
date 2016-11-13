@@ -1,0 +1,15 @@
+.ulForm > ul {
+    display:table;
+}
+.ulForm > li {
+    display:table-row;
+    list-style:none;
+}
+.ulForm > input, label {
+    display:table-cell;
+    padding-bottom:15px;
+}
+
+#registerDiv {
+    display:none;
+}

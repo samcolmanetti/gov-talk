@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{% static "assets/css/main.css" %}"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="subpage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Logo -->
+									<h1><a href="#" id="logo">Home</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="/home/">Dashboard</a>
+										<a href="/logout/">Logout</a>
+									</nav>
+
+							</div>
+						</div>
+					</header>
+				</div>
+
+			<!-- Content -->
+				<div id="content-wrapper">
+					<div id="content">
+						<div class="container">
+							<div class="row">
+								<div class="12u">
+
+									<!-- Main Content -->
+										<section>
+											<header>
+												<h2 style="font-size: 48px;">Your Congressmen</h2>
+											</header>
+											<div class="person">
+											    <h2>{{ rep.first_name}}  {{ rep.last_name }}</h2>
+											    Party: <span>{{ rep.party }}</span></br>
+											    Role: <span>{{ rep.title_long }}</span></br>
+											    State: <span>{{ rep.state }}</span></br>
+											    District <span>{{ rep.district }}</span></br>
+											    <a href="{{ rep.contact_page }}">Contact me!</a></p>
+											</div>
+											<hl/>
+											
+											<div class="person">
+											    <h2>{{ sen1.first_name }} {{ sen1.last_name }}</h2>
+											    Party: <span>{{ sen1.party }}</span></br>
+											    Role: <span>{{ sen1.title_long }}</span></br>
+											    State: <span>{{ sen1.state }}</span></br>
+											    <a href="{{ sen1.contact_page }}">Contact me!</a></p>
+											</div>
+											
+											<div class="person">
+											    <h2>{{ sen2.first_name }} {{ sen2.last_name }}</h2>
+											    Party: <span>{{ sen2.party }}</span></br>
+											    Role: <span>{{ sen2.title_long }}</span></br>
+											    State: <span>{{ sen2.state }}</span></br>
+											    <a href="{{ sen2.contact_page }}">Contact me!</a></p>
+											</div>
+											
+										</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Copyright -->
+				<div id="copyright">
+					&copy; HackScranton. All rights reserved.
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static "assets/js/jquery.min.js" %}"></script>
+			<script src="{% static "assets/js/skel.min.js" %}"></script>
+			<script src="{% static "assets/js/skel-viewport.min.js" %}"></script>
+			<script src="{% static "assets/js/util.js" %}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{% static "assets/js/main.js" %}"></script>
+
+	</body>
+</html>
